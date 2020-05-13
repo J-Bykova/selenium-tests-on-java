@@ -51,6 +51,7 @@ public class MainPage {
         this.typeUsername(userName);
         this.typePassword(password);
         this.typeEmail(email);
+        this.clickSignUpForGitHubButton();
         return new SingUpPage(driver);
     }
 
