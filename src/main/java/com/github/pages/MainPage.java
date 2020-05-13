@@ -33,12 +33,12 @@ public class MainPage {
     }
 
     public MainPage typeUsername(String userName) {
-        driver.findElement(passwordField).sendKeys(userName);
+        driver.findElement(usernameField).sendKeys(userName);
         return this;
     }
 
     public MainPage typePassword(String password) {
-        driver.findElement(usernameField).sendKeys(password);
+        driver.findElement(passwordField).sendKeys(password);
         return this;
     }
 
