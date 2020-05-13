@@ -5,10 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class HeaderElement {
+public class MainPage {
     private WebDriver driver;
 
-    public HeaderElement(WebDriver driver) {
+    public MainPage(WebDriver driver) {
         this.driver = driver;
     }
 
