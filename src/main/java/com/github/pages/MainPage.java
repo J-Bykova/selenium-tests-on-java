@@ -12,10 +12,10 @@ public class MainPage {
 
     private By singInButton = By.xpath("//header//a[contains(text(), 'Sign\\u00A0in')]");
     private By singUpButton = By.xpath("");
-    private By usernameField = By.xpath("//input[@id='user[login]");
-    private By emailField = By.xpath("//input[@id='user[email]");
-    private By passwordField = By.xpath("//input[@id='user[password]");
-    private By signUpForGitHubButton = By.xpath("");
+    private By usernameField = By.id("user[login]");
+    private By emailField = By.id("user[email]");
+    private By passwordField = By.id("user[password]");
+    private By signUpForGitHubButton = By.xpath("//button[@class='btn-mktg btn-primary-mktg btn-large-mktg f4 btn-block my-3']");
 
     public LoginPage clickSingInButton() {
         driver.findElement(singInButton).click();
