@@ -91,4 +91,7 @@ public class SingUpPage {
     }
 
 
+    public String getHeaderText() {
+        return headerPage.getText();
+    }
 }
