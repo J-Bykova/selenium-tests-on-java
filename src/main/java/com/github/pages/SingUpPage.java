@@ -17,8 +17,10 @@ public class SingUpPage {
     private By passwordField = By.xpath("//input[@id='user[password]");
     private By emailPreferencesCheckbox = By.xpath("//input[@id='all_emails']");
     private By createAccountButton = By.xpath("//button[@id='signup_button']");
-    private By error = By.xpath("//*[contains(text(), 'There were problems creating your account.')]");
-    private By errorTextForUsernameField = By.xpath("");
+    private By mainError = By.xpath("//*[contains(text(), 'There were problems creating your account.')]");
+    private By userNameError = By.xpath("");
+    private By emailError = By.xpath("");
+    private By passwordError = By.xpath("");
 
 
     public SingUpPage typeUsername(String userName) {
@@ -38,6 +40,30 @@ public class SingUpPage {
 
     public Boolean isButtonEnabled() {
         return driver.findElement(createAccountButton).isEnabled();
+    }
+
+    public SingUpPage registerWithInvalidDate(String userName, String email, String password) {
+        this.typeUsername(userName);
+        this.typeEmail(email);
+        this.typePassword(password);
+        driver.findElement(createAccountButton).click();
+        return new SingUpPage(driver);
+    }
+
+    public String getMainErrorText() {
+        return driver.findElement(mainError).getText();
+    }
+
+    public String getUserNameErrorText() {
+        return driver.findElement(userNameError).getText();
+    }
+
+    public String getEmailErrorText() {
+        return driver.findElement(emailError).getText();
+    }
+
+    public String getPasswordErrorText() {
+        return driver.findElement(passwordError).getText();
     }
 
 
