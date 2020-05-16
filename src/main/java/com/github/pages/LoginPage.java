@@ -48,4 +48,8 @@ public class LoginPage {
         driver.findElement(createAccountLink).click();
         return new SingUpPage(driver);
     }
+    public ResetPasswordPage clickForgotPasswordLink(){
+        driver.findElement(forgotPasswordLink).click();
+        return new ResetPasswordPage(driver);
+    }
 }
