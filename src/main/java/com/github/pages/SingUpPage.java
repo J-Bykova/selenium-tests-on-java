@@ -12,6 +12,7 @@ public class SingUpPage {
     public SingUpPage(WebDriver driver) {
         this.driver = driver;
     }
+    //TODO
 
     @FindBy(xpath = "//*[contains(text(), 'Create your account')]")
     private WebElement headerPage;

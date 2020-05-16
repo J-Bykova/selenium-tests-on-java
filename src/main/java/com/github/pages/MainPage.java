@@ -12,6 +12,7 @@ public class MainPage {
         this.driver = driver;
     }
 
+    //TODO
     @FindBy(xpath = "//header//a[contains(text(), 'Sign\\u00A0in')]")
     private WebElement singInButton;
     @FindBy(xpath = "")
