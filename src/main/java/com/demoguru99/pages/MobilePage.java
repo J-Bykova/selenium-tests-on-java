@@ -15,25 +15,25 @@ public class MobilePage {
     }
 
     private By titleMobilePage = By.xpath("//h1[contains(text(),'Mobile')]");
-    private By sortByDropdown = By.xpath("");
-    private By sortByNameOption = By.xpath("");
-    private By sortByPriceOption = By.xpath("");
-    private By productNamesLocator = By.xpath("//*[@class=\"product-name\"]");
-    private By productPriceLocator = By.xpath("//*[@class=\"price-box\"]");
+    private By sortByDropdownLocator = By.xpath("//*[@class='category-products']/*[@class='toolbar']//*[@class='sort-by']/select");
+    private By sortByNameOptionLocator = By.xpath("//*[@class='category-products']/*[@class='toolbar']//*[@class='sort-by']//option[contains(text(), 'Name')]");
+    private By sortByPriceOptionLocator = By.xpath("//*[@class='category-products']/*[@class='toolbar']//*[@class='sort-by']//option[contains(text(), 'Price')]");
+    private By productNamesLocator = By.xpath("//*[@class='product-name']");
+    private By productPriceLocator = By.xpath("//*[@class='price-box']");
 
     public String getTitleMobilePage() {
         return driver.findElement(titleMobilePage).getText();
     }
 
     public MobilePage sortByName() {
-        driver.findElement(sortByDropdown).click();
-        driver.findElement(sortByNameOption).click();
+        driver.findElement(sortByDropdownLocator).click();
+        driver.findElement(sortByNameOptionLocator).click();
         return this;
     }
 
     public void sortByPrice() {
-        driver.findElement(sortByDropdown).click();
-        driver.findElement(sortByPriceOption).click();
+        driver.findElement(sortByDropdownLocator).click();
+        driver.findElement(sortByPriceOptionLocator).click();
     }
 
     public Boolean isSortedByPrice() {
