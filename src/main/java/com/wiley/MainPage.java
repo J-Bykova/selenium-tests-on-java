@@ -2,8 +2,7 @@ package com.wiley;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+
 
 public class MainPage {
     private WebDriver driver;
@@ -12,25 +11,19 @@ public class MainPage {
         this.driver = driver;
     }
 
-    private By logo = By.xpath("");
     private By whoWeServeButton = By.xpath("//a[contains(text(),'WHO WE SERVE')]");
     private By subjectsButton = By.xpath("//a[contains(text(),'SUBJECTS')]");
-    private By theWileyNetworkButton = By.xpath("//a[contains(text(),'THE WILEY NETWORK')]");
     private By aboutButton = By.xpath("//a[contains(text(),'ABOUT')]");
-    private By countrySelectedButton = By.xpath("//span[@class='country-selected trigger-country-dropdown']");
-    private By siteSearchField = By.xpath("//input[@id='js-site-search-input']");
 
-    public void hoverToButton(By xpath) {
-        Actions actions = new Actions(driver);
-        actions.moveToElement((WebElement) xpath).build().perform();
+    public Boolean is_whoWeServe_MenuItemPresent() {
+        return driver.findElements(whoWeServeButton).size() > 0;
     }
 
-    public void clickToButton(By xpath) {
-        driver.findElement(xpath).click();
+    public Boolean is_subjects_MenuItemPresent() {
+        return driver.findElements(subjectsButton).size() > 0;
     }
 
-    public void elementIsDisplayed(By xpath) {
-        driver.findElement(xpath).isDisplayed();
+    public Boolean is_about_MenuItemPresent() {
+        return driver.findElements(aboutButton).size() > 0;
     }
-
 }
