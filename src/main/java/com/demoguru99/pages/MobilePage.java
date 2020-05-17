@@ -2,6 +2,10 @@ package com.demoguru99.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MobilePage {
     WebDriver driver;
@@ -11,16 +15,72 @@ public class MobilePage {
     }
 
     private By titleMobilePage = By.xpath("//h1[contains(text(),'Mobile')]");
-    private By sortByDropDownList = By.xpath("");
-    private By sortByName = By.xpath("");
+    private By sortByDropdown = By.xpath("");
+    private By sortByNameOption = By.xpath("");
+    private By sortByPriceOption = By.xpath("");
+    private By productNamesLocator = By.xpath("//*[@class=\"product-name\"]");
+    private By productPriceLocator = By.xpath("//*[@class=\"price-box\"]");
 
     public String getTitleMobilePage() {
         return driver.findElement(titleMobilePage).getText();
     }
 
-    public MobilePage selectSortByName() {
-        driver.findElement(sortByDropDownList).click();
-        driver.findElement(sortByName).click();
+    public MobilePage sortByName() {
+        driver.findElement(sortByDropdown).click();
+        driver.findElement(sortByNameOption).click();
         return this;
     }
+
+    public void sortByPrice() {
+        driver.findElement(sortByDropdown).click();
+        driver.findElement(sortByPriceOption).click();
+    }
+
+    public Boolean isSortedByPrice() {
+        List<Integer> prices = getProductPrice();
+
+        for (int i = 1; i < prices.size(); i++) {
+            if (prices.get(i - 1) < prices.get(i)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public Boolean isSortedByName() {
+        List<String> names = getProductNames();
+
+        for (int i = 1; i < names.size(); i++) {
+            String curItem = names.get(i).toLowerCase();
+            String prevItem = names.get(i - 1).toLowerCase();
+
+            if (prevItem.compareTo(curItem) > 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private List<Integer> getProductPrice() {
+        List<WebElement> productPriceElements = driver.findElements(productPriceLocator);
+        List<Integer> prices = new ArrayList<Integer>();
+
+        for (WebElement productPriceElement : productPriceElements) {
+            String price = productPriceElement.getText().substring(1);
+            prices.add(Integer.parseInt(price));
+        }
+        return prices;
+    }
+
+    private List<String> getProductNames() {
+        List<WebElement> productNameElements = driver.findElements(productNamesLocator);
+        List<String> names = new ArrayList<String>();
+
+        for (WebElement productNameElement : productNameElements) {
+            names.add(productNameElement.getText());
+        }
+        return names;
+    }
+
+
 }

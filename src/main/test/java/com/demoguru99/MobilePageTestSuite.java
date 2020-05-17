@@ -1,17 +1,13 @@
 package com.demoguru99;
 
-import com.demoguru99.pages.HomePage;
 import com.demoguru99.pages.MobilePage;
-import com.github.pages.MainPage;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class MobilePageTestSuite {
@@ -31,13 +27,21 @@ public class MobilePageTestSuite {
     }
 
     @Test
-    public void CheckMobilePageTitle() {
+    public void checkMobilePageTitle() {
         String inputTitleMobilePage = mobilePage.getTitleMobilePage();
         Assert.assertEquals(expectedTitleMobilePage, inputTitleMobilePage);
     }
 
     @Test
-    public void mobile_list_should_sort_by_name(){
+    public void mobile_list_should_sort_by_name() {
+        mobilePage.sortByName();
+        Assert.assertTrue(mobilePage.isSortedByName());
+    }
+
+    @Test
+    public void mobile_list_should_sort_by_price() {
+        mobilePage.sortByPrice();
+        Assert.assertTrue(mobilePage.isSortedByPrice());
 
     }
 

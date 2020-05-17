@@ -9,19 +9,12 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
-
 import java.util.concurrent.TimeUnit;
+import static com.guru99Bank.testData.LoginPageTestData.*;
 
 public class LoginPageTestSuite {
     private WebDriver driver;
     private LoginPage loginPage;
-
-
-    private String validUserId = "mngr261185";
-    private String validPassword = "Unamazu";
-    private String inValidUserId = "Jenny";
-    private String inValidPassword = "12345";
-    private String expectedTitleHomePage = "Manger Id : mngr261185";
 
     @Before
     public void setUp() {
