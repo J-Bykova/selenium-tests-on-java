@@ -1,7 +1,5 @@
 package com.github.pages;
 
-import com.sun.xml.internal.rngom.digested.DRefPattern;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

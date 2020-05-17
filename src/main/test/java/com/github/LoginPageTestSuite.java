@@ -1,7 +1,6 @@
 package com.github;
 
 import com.github.pages.LoginPage;
-import com.github.pages.MainPage;
 import com.github.pages.SingUpPage;
 import org.junit.After;
 import org.junit.Assert;
