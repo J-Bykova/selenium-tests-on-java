@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
 import java.util.concurrent.TimeUnit;
 
 public class MainPageTestSuite {
@@ -38,8 +39,24 @@ public class MainPageTestSuite {
     }
 
     @Test
-    public void WhoWeServe_menu_should_contain_12_items (){
+    public void WhoWeServe_menu_should_contain_12_items() {
         Assert.assertEquals(12, mainPage.getNumberOfItemsIn_whoWeServe());
+    }
+
+    @Test
+    public void WhoWeServe_menu_should_contain_() {
+        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Students"));
+        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Instructors"));
+        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Book Authors"));
+        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Professionals"));
+        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Researchers"));
+        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Institutions"));
+        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Librarians"));
+        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Corporations"));
+        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Societies"));
+        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Journal Editors"));
+        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Bookstores"));
+        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Government"));
     }
 
     @After
