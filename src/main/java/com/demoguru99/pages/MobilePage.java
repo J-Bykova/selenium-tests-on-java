@@ -21,6 +21,7 @@ public class MobilePage {
     private By productNamesLocator = By.xpath("//*[@class='product-name']");
     private By productPriceLocator = By.xpath("//*[@class='price-box']");
     private By costSonyXperia = By.xpath("");
+    private By cardSonyXperia = By.xpath("");
 
     public String getTitleMobilePage() {
         return driver.findElement(titleMobilePage).getText();
