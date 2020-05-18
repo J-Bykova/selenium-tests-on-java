@@ -39,7 +39,7 @@ public class MainPageTestSuite {
 
     @Test
     public void WhoWeServe_menu_should_contain_12_items (){
-        Assert.assertEquals(12, mainPage.getNumberOfItemsInTheMenu());
+        Assert.assertEquals(12, mainPage.getNumberOfItemsIn_whoWeServe());
     }
 
     @After
