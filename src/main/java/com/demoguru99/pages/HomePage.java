@@ -18,7 +18,7 @@ public class HomePage {
     }
 
     public MobilePage clickMobileLink() {
-        driver.findElement(mobileLink).submit();
+        driver.findElement(mobileLink).click();
         return new MobilePage(driver);
     }
 
