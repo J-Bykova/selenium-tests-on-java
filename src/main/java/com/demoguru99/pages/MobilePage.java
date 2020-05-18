@@ -20,7 +20,7 @@ public class MobilePage {
     private By sortByPriceOptionLocator = By.xpath("//*[@class='category-products']/*[@class='toolbar']//*[@class='sort-by']//option[contains(text(), 'Price')]");
     private By productNamesLocator = By.xpath("//*[@class='product-name']");
     private By productPriceLocator = By.xpath("//*[@class='price-box']");
-    private By costSonyXperia = By.xpath("");
+    private By priceSonyXperia = By.xpath("");
     private By cardSonyXperia = By.xpath("");
 
     public SonyXperiaPage clickCardSonyXperia() {
@@ -28,7 +28,7 @@ public class MobilePage {
         return new SonyXperiaPage(driver);
     }
 
-    public String getCostSonyXperia() {
+    public String getPriceSonyXperia() {
         String priceSonyXperiaText = driver.findElement(cardSonyXperia).getText().toLowerCase();
         return priceSonyXperiaText;
     }
