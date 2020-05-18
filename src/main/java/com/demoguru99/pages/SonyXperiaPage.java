@@ -1,5 +1,6 @@
 package com.demoguru99.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class SonyXperiaPage {
@@ -7,5 +8,11 @@ public class SonyXperiaPage {
 
     public SonyXperiaPage(WebDriver driver) {
         this.driver = driver;
+    }
+    private By priceSonyXperia = By.xpath("");
+
+    public String getPriceSonyXperia() {
+        String priceSonyXperiaText = driver.findElement(priceSonyXperia).getText().toLowerCase();
+        return priceSonyXperiaText;
     }
 }
