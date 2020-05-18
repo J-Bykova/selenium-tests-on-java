@@ -31,7 +31,7 @@ public class LoginPage {
     public HomePage loginIn(String userId, String password) {
         this.typeUserId(userId);
         this.typePassword(password);
-        driver.findElement(loginButton).click();
+        driver.findElement(loginButton).submit();
         return new HomePage(driver);
     }
 }
