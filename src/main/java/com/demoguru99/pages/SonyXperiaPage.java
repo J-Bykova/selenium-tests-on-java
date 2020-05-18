@@ -9,7 +9,7 @@ public class SonyXperiaPage {
     public SonyXperiaPage(WebDriver driver) {
         this.driver = driver;
     }
-    private By priceSonyXperia = By.xpath("");
+    private By priceSonyXperia = By.xpath("//span[@class='price']");
 
     public String getPriceSonyXperia() {
         String priceSonyXperiaText = driver.findElement(priceSonyXperia).getText().toLowerCase();
