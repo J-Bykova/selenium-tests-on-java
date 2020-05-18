@@ -28,6 +28,11 @@ public class MobilePage {
         return new SonyXperiaPage(driver);
     }
 
+    public String getCostSonyXperia() {
+        String costSonyXperiaText = driver.findElement(cardSonyXperia).getText().toLowerCase();
+        return costSonyXperiaText;
+    }
+
     public String getTitleMobilePage() {
         return driver.findElement(titleMobilePage).getText();
     }
