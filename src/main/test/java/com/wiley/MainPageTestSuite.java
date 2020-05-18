@@ -43,6 +43,7 @@ public class MainPageTestSuite {
         Assert.assertEquals(12, mainPage.getNumberOfItemsIn_whoWeServe());
     }
 
+    //TODO
     @Test
     public void WhoWeServe_menu_should_contain_() {
         Assert.assertTrue(mainPage.isItemPresentInTheMenu("Students"));
