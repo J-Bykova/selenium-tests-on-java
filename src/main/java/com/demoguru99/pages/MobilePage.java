@@ -29,7 +29,7 @@ public class MobilePage {
     }
 
     public String getPriceSonyXperia() {
-        String priceSonyXperiaText = driver.findElement(cardSonyXperia).getText().toLowerCase();
+        String priceSonyXperiaText = driver.findElement(priceSonyXperia).getText().toLowerCase();
         return priceSonyXperiaText;
     }
 
