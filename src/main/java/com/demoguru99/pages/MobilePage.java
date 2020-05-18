@@ -23,6 +23,11 @@ public class MobilePage {
     private By costSonyXperia = By.xpath("");
     private By cardSonyXperia = By.xpath("");
 
+    public SonyXperiaPage clickCardSonyXperia() {
+        driver.findElement(cardSonyXperia).click();
+        return new SonyXperiaPage(driver);
+    }
+
     public String getTitleMobilePage() {
         return driver.findElement(titleMobilePage).getText();
     }
