@@ -37,6 +37,11 @@ public class MainPageTestSuite {
         Assert.assertTrue(mainPage.is_about_MenuItemPresent());
     }
 
+    @Test
+    public void WhoWeServe_menu_should_contain_12_items (){
+        Assert.assertEquals(12, mainPage.getNumberOfItemsInTheMenu());
+    }
+
     @After
     public void tearDown() {
         driver.quit();
