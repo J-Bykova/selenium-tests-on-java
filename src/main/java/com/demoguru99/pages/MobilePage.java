@@ -20,6 +20,7 @@ public class MobilePage {
     private By sortByPriceOptionLocator = By.xpath("//*[@class='category-products']/*[@class='toolbar']//*[@class='sort-by']//option[contains(text(), 'Price')]");
     private By productNamesLocator = By.xpath("//*[@class='product-name']");
     private By productPriceLocator = By.xpath("//*[@class='price-box']");
+    private By costSonyXperia = By.xpath("");
 
     public String getTitleMobilePage() {
         return driver.findElement(titleMobilePage).getText();
