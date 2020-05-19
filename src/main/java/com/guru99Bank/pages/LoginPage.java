@@ -1,5 +1,6 @@
 package com.guru99Bank.pages;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -33,5 +34,17 @@ public class LoginPage {
         this.typePassword(password);
         driver.findElement(loginButton).submit();
         return new HomePage(driver);
+    }
+
+    public LoginPage invalidLoginIn(String userId, String password) {
+        this.typeUserId(userId);
+        this.typePassword(password);
+        driver.findElement(loginButton).submit();
+        return new LoginPage(driver);
+    }
+
+    public String getErrorMessage() {
+        Alert alert = driver.switchTo().alert();
+        return alert.getText();
     }
 }

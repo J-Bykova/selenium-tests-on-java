@@ -1,7 +1,10 @@
 package com.guru99Bank.pages;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
+import javax.naming.ldap.LdapReferralException;
 
 public class HomePage {
     WebDriver driver;
@@ -11,6 +14,8 @@ public class HomePage {
     }
 
     private By titleHomePage = By.xpath("//td[contains(text(),'Manger Id : mngr261185')]");
+    private By errorMessageForInvalidLogin = By.xpath("");
+
 
     public String getTitleHomePage() {
         return driver.findElement(titleHomePage).getText();

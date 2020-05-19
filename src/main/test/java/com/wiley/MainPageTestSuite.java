@@ -44,21 +44,21 @@ public class MainPageTestSuite {
     }
 
     //TODO
-    @Test
-    public void WhoWeServe_menu_should_contain_() {
-        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Students"));
-        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Instructors"));
-        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Book Authors"));
-        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Professionals"));
-        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Researchers"));
-        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Institutions"));
-        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Librarians"));
-        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Corporations"));
-        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Societies"));
-        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Journal Editors"));
-        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Bookstores"));
-        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Government"));
-    }
+//    @Test
+//    public void WhoWeServe_menu_should_contain_() {
+//        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Students"));
+//        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Instructors"));
+//        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Book Authors"));
+//        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Professionals"));
+//        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Researchers"));
+//        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Institutions"));
+//        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Librarians"));
+//        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Corporations"));
+//        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Societies"));
+//        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Journal Editors"));
+//        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Bookstores"));
+//        Assert.assertTrue(mainPage.isItemPresentInTheMenu("Government"));
+//    }
 
     @After
     public void tearDown() {

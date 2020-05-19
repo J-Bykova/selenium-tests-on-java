@@ -9,7 +9,9 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
+
 import java.util.concurrent.TimeUnit;
+
 import static com.guru99Bank.testData.LoginPageTestData.*;
 
 public class LoginPageTestSuite {
@@ -31,6 +33,14 @@ public class LoginPageTestSuite {
         HomePage newHomePage = loginPage.loginIn(validUserId, validPassword);
         String titleHomePage = newHomePage.getTitleHomePage();
         Assert.assertEquals(expectedTitleHomePage, titleHomePage);
+    }
+
+    @Test
+    public void should_appear_popUp_with_error_message_when_type_invalid_userId_and_valid_password() {
+        LoginPage page = loginPage.invalidLoginIn(invalidUserId, validPassword);
+        String popUpWithErrorMessage = page.getErrorMessage();
+        System.out.println(popUpWithErrorMessage);
+//        Assert.assertEquals(expectedErrorTextForInvalidLoginIn, popUpWithErrorMessage);
     }
 
     @After
