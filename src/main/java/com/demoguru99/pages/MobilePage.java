@@ -28,7 +28,7 @@ public class MobilePage {
         return new SonyXperiaPage(driver);
     }
 
-    public String getPriceSonyXperia() {
+    public String getPriceFor(String productName) {
         String priceSonyXperiaText = driver.findElement(priceSonyXperia).getText().toLowerCase();
         return priceSonyXperiaText;
     }
