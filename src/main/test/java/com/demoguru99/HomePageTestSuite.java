@@ -28,7 +28,7 @@ public class HomePageTestSuite {
     }
 
     @Test
-    public void should_present_in_home_page_test_ThisIsDemoSite() {
+    public void should_present_in_home_page_text_ThisIsDemoSite() {
         String titleOnHomePage = homePage.getTitleOnHomePage();
         Assert.assertEquals(expectedTitleHomePage, titleOnHomePage);
     }
