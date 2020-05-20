@@ -5,6 +5,5 @@ public class LoginPageTestData {
     public static String validPassword = "Unamazu";
     public static String invalidUserId = "Jenny";
     public static String invalidPassword = "12345";
-    public static String expectedTitleHomePage = "Manger Id : mngr261185";
     public static String expectedErrorTextForInvalidLoginIn = "User or Password is not valid";
 }
