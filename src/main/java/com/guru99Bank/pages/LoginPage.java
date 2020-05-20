@@ -2,6 +2,8 @@ package com.guru99Bank.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage {
     WebDriver driver;
@@ -45,5 +47,10 @@ public class LoginPage {
     public String getAlertMessage() {
         String alert = driver.switchTo().alert().getText();
         return alert;
+    }
+
+    public boolean isAlertPresent() {
+        WebDriverWait wait = new WebDriverWait(driver, 300);
+        return wait.until(ExpectedConditions.alertIsPresent()) != null;
     }
 }

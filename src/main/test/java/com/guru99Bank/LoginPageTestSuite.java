@@ -40,6 +40,7 @@ public class LoginPageTestSuite {
     public void should_not_log_in_with_invalid_user_id_and_valid_password() {
         LoginPage page = loginPage.invalidLoginIn(invalidUserId, validPassword);
         String popUpWithErrorMessage = page.getAlertMessage();
+
         System.out.println(popUpWithErrorMessage);
 //        Assert.assertEquals(expectedErrorTextForInvalidLoginIn, popUpWithErrorMessage);
     }
