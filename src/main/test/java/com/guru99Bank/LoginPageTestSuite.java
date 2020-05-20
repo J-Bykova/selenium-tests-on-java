@@ -36,7 +36,7 @@ public class LoginPageTestSuite {
     }
 
     @Test
-    public void should_appear_popUp_with_error_message_when_type_invalid_userId_and_valid_password() {
+    public void should_not_log_in_with_invalid_user_id_and_valid_password() {
         LoginPage page = loginPage.invalidLoginIn(invalidUserId, validPassword);
         String popUpWithErrorMessage = page.getErrorMessage();
         System.out.println(popUpWithErrorMessage);
