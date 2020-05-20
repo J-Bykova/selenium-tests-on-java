@@ -49,8 +49,8 @@ public class LoginPage {
         return alert;
     }
 
-    public boolean isAlertPresent() {
+    public void isAlertPresent() {
         WebDriverWait wait = new WebDriverWait(driver, 300);
-        return wait.until(ExpectedConditions.alertIsPresent()) != null;
+        wait.until(ExpectedConditions.alertIsPresent());
     }
 }
