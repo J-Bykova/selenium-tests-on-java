@@ -44,6 +44,14 @@ public class LoginPageTestSuite {
         Assert.assertEquals(expectedErrorTextForInvalidLoginIn, popUpWithErrorMessage);
     }
 
+    @Test
+    public void should_not_log_in_with_valid_user_id_and_invalid_password() {
+        LoginPage page = loginPage.invalidLoginIn(validUserId, invalidPassword);
+        page.isAlertPresent();
+        String popUpWithErrorMessage = page.getAlertMessage();
+        Assert.assertEquals(expectedErrorTextForInvalidLoginIn, popUpWithErrorMessage);
+    }
+
     @After
     public void tearDown() {
         driver.quit();
