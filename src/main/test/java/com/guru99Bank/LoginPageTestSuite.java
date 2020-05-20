@@ -29,7 +29,7 @@ public class LoginPageTestSuite {
     }
 
     @Test
-    public void should_open_homePage_when_type_valid_userId_and_password() {
+    public void should_log_in_successful_with_valid_data() {
         HomePage newHomePage = loginPage.loginIn(validUserId, validPassword);
         String titleHomePage = newHomePage.getTitleHomePage();
         Assert.assertEquals(expectedTitleHomePage, titleHomePage);

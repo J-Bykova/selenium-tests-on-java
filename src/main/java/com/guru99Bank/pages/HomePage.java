@@ -1,10 +1,8 @@
 package com.guru99Bank.pages;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import javax.naming.ldap.LdapReferralException;
 
 public class HomePage {
     WebDriver driver;
