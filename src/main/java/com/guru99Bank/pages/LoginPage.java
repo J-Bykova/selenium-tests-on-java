@@ -1,6 +1,5 @@
 package com.guru99Bank.pages;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -43,8 +42,8 @@ public class LoginPage {
         return new LoginPage(driver);
     }
 
-    public String getErrorMessage() {
-        Alert alert = driver.switchTo().alert();
-        return alert.getText();
+    public String getAlertMessage() {
+        String alert = driver.switchTo().alert().getText();
+        return alert;
     }
 }
