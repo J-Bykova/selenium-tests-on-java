@@ -11,11 +11,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
+import static com.guru99Bank.testData.HomePageTestData.*;
+
 public class HomePageTestSuite {
     private WebDriver driver;
     private HomePage homePage;
-
-    private String expectedTitleHomePage = "THIS IS DEMO SITE FOR";
 
     @Before
     public void setUp() {
