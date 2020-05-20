@@ -45,12 +45,8 @@ public class LoginPage {
     }
 
     public String getAlertMessage() {
-        String alert = driver.switchTo().alert().getText();
-        return alert;
-    }
-
-    public void isAlertPresent() {
         WebDriverWait wait = new WebDriverWait(driver, 300);
         wait.until(ExpectedConditions.alertIsPresent());
+        return driver.switchTo().alert().getText();
     }
 }

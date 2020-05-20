@@ -39,7 +39,6 @@ public class LoginPageTestSuite {
     @Test
     public void should_not_log_in_with_invalid_user_id_and_valid_password() {
         LoginPage page = loginPage.invalidLoginIn(invalidUserId, validPassword);
-        page.isAlertPresent();
         String popUpWithErrorMessage = page.getAlertMessage();
         Assert.assertEquals(expectedErrorTextForInvalidLoginIn, popUpWithErrorMessage);
     }
@@ -47,7 +46,6 @@ public class LoginPageTestSuite {
     @Test
     public void should_not_log_in_with_valid_user_id_and_invalid_password() {
         LoginPage page = loginPage.invalidLoginIn(validUserId, invalidPassword);
-        page.isAlertPresent();
         String popUpWithErrorMessage = page.getAlertMessage();
         Assert.assertEquals(expectedErrorTextForInvalidLoginIn, popUpWithErrorMessage);
     }
@@ -55,7 +53,6 @@ public class LoginPageTestSuite {
     @Test
     public void should_not_log_in_with_invalid_user_id_and_invalid_password() {
         LoginPage page = loginPage.invalidLoginIn(invalidUserId, invalidPassword);
-        page.isAlertPresent();
         String popUpWithErrorMessage = page.getAlertMessage();
         Assert.assertEquals(expectedErrorTextForInvalidLoginIn, popUpWithErrorMessage);
     }
