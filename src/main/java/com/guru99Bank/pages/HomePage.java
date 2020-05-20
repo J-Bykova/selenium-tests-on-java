@@ -12,8 +12,6 @@ public class HomePage {
     }
 
     private By titleHomePage = By.xpath("//td[contains(text(),'Manger Id : mngr261185')]");
-    private By errorMessageForInvalidLogin = By.xpath("");
-
 
     public String getTitleHomePage() {
         return driver.findElement(titleHomePage).getText();
