@@ -27,7 +27,7 @@ public class MobilePageTestSuite {
     }
 
     @Test
-    public void checkMobilePageTitle() {
+    public void should_present_in_home_page_text_Mobile() {
         String inputTitleMobilePage = mobilePage.getTitleMobilePage();
         Assert.assertEquals(expectedTitleMobilePage, inputTitleMobilePage);
     }
