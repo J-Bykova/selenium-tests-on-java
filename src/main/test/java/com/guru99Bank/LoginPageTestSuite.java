@@ -13,6 +13,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.concurrent.TimeUnit;
 
 import static com.guru99Bank.testData.LoginPageTestData.*;
+import static com.guru99Bank.testData.HomePageTestData.*;
 
 public class LoginPageTestSuite {
     private WebDriver driver;
