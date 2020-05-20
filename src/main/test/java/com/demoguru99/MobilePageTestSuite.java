@@ -10,11 +10,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
+import static com.demoguru99.testData.MobilePageTestData.*;
+
 public class MobilePageTestSuite {
     private WebDriver driver;
     private MobilePage mobilePage;
 
-    private String expectedTitleMobilePage = "MOBILE";
 
     @Before
     public void setUp() {
