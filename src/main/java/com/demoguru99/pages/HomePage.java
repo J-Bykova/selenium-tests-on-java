@@ -10,11 +10,11 @@ public class HomePage {
         this.driver = driver;
     }
 
-    private By titleHomePage = By.xpath("//h2[contains(text(), 'This is demo site for ')]");
+    private By titleOnHomePageElement = By.xpath("//h2[contains(text(), 'This is demo site for ')]");
     private By mobileLink = By.xpath("//a[contains(text(),'Mobile')]");
 
-    public String getTitleHomePage() {
-        return driver.findElement(titleHomePage).getText();
+    public String getTitleOnHomePage() {
+        return driver.findElement(titleOnHomePageElement).getText().toLowerCase().trim();
     }
 
     public MobilePage clickMobileLink() {

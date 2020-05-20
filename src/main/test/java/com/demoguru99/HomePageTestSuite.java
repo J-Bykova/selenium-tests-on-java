@@ -1,7 +1,9 @@
 package com.demoguru99;
 
-
 import com.demoguru99.pages.HomePage;
+
+import static com.demoguru99.testData.HomePageTestData.*;
+
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -10,8 +12,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
-
-import static com.guru99Bank.testData.HomePageTestData.*;
 
 public class HomePageTestSuite {
     private WebDriver driver;
@@ -29,8 +29,8 @@ public class HomePageTestSuite {
 
     @Test
     public void should_present_in_home_page_test_ThisIsDemoSite() {
-        String inputTitleHomePage = homePage.getTitleHomePage();
-        Assert.assertEquals(expectedTitleHomePage, inputTitleHomePage);
+        String titleOnHomePage = homePage.getTitleOnHomePage();
+        Assert.assertEquals(expectedTitleHomePage, titleOnHomePage);
     }
 
     @After
