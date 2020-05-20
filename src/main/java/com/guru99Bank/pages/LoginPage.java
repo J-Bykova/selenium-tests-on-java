@@ -15,10 +15,6 @@ public class LoginPage {
     private By userIdField = By.xpath("//input[@name='uid']");
     private By passwordField = By.xpath("//input[@name='password']");
     private By loginButton = By.xpath("//input[@name='btnLogin']");
-    private By resetButton = By.xpath("//input[@name='btnReset']");
-    private By userIdErrorMessage = By.xpath("//*[contains(text(), 'User-ID must not be blank')]");
-    private By passwordErrorMessage = By.xpath("//*[contains(text(), 'Password must not be blank')]");
-    private By headerPage = By.xpath("//h2[@class='barone']");
 
     public LoginPage typeUserId(String userId) {
         driver.findElement(userIdField).sendKeys(userId);
