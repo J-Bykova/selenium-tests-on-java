@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import static com.guru99Bank.testData.LoginPageTestData.*;
@@ -30,10 +31,11 @@ public class LoginPageTestSuite {
     }
 
     @Test
-    public void on_homepage_should_be_manager_id_is_correct(){
+    public void on_homepage_should_be_manager_id_is_correct() throws IOException {
         HomePage homePage = loginPage.loginIn(validUserId, validPassword);
         String managerId = homePage.getManagerId();
         Assert.assertEquals(expectedManagerId, managerId);
+        homePage.takeScreenshotHomePage();
     }
 
     @Test
