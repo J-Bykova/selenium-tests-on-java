@@ -12,8 +12,13 @@ public class HomePage {
     }
 
     private By titleHomePage = By.xpath("//td[contains(text(),'Manger Id : mngr261185')]");
+    private By managerIdElement = By.xpath("//td[contains(text(),'Manger Id : mngr261185')]");
 
     public String getTitleHomePage() {
         return driver.findElement(titleHomePage).getText();
+    }
+
+    public String getManagerId() {
+        return driver.findElement(managerIdElement).getText();
     }
 }

@@ -30,6 +30,13 @@ public class LoginPageTestSuite {
     }
 
     @Test
+    public void on_homepage_should_be_manager_id_is_correct(){
+        HomePage homePage = loginPage.loginIn(validUserId, validPassword);
+        String managerId = homePage.getManagerId();
+        Assert.assertEquals(expectedManagerId, managerId);
+    }
+
+    @Test
     public void should_log_in_successful_with_valid_data() {
         HomePage newHomePage = loginPage.loginIn(validUserId, validPassword);
         String titleHomePage = newHomePage.getTitleHomePage();
