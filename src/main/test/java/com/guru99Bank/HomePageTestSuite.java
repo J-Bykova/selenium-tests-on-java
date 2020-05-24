@@ -2,9 +2,7 @@ package com.guru99Bank;
 
 import com.github.pages.LoginPage;
 import com.guru99Bank.pages.HomePage;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.BeforeClass;
+import org.junit.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;

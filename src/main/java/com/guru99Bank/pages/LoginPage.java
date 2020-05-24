@@ -15,6 +15,7 @@ public class LoginPage {
     private By userIdField = By.xpath("//input[@name='uid']");
     private By passwordField = By.xpath("//input[@name='password']");
     private By loginButton = By.xpath("//input[@name='btnLogin']");
+    private By errorMessageIfIdIsEmptyElement = By.xpath("");
 
     public LoginPage typeUserId(String userId) {
         driver.findElement(userIdField).sendKeys(userId);
